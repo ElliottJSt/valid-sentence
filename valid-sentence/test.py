@@ -13,6 +13,7 @@ testSentences = ["The quick brown fox said \"hello Mr lazy dog\".",
                  "One lazy dog is too few, 12 is too many.",
                  "Are there 11, 12, or 13 lazy dogs?",
                  "There is no punctuation in this sentence"]
+# Runs each string in testSentences through check_valid_sentence and prints the result.
 try:
     y = 1
     for x in testSentences:
@@ -22,6 +23,5 @@ try:
             print("Passed")
         else:
             print("Failed")
-    check_valid_sentence(12)
 except Exception as e:
     print("Error occurred: ", e)

@@ -1,17 +1,35 @@
-def check_valid_sentence(inp):
-    # First checks if input is a String
+def check_valid_sentence(inp: str) -> bool:
+    """
+    A function that checks the validity of a sentence against a list of rules.
+    
+        Parameters
+        ----------
+        inp : str
+            A string containing the sentence to be checked.
+
+        Returns
+        ----------
+        bool
+            True if sentence is valid, False if not.
+
+        Raises
+        ----------
+        ValueError
+            If input isn't a string.
+    """
+    # First checks if input is a String.
     if not (isinstance(inp, str)):
         raise ValueError("Invalid Data Type: Input must be a string")
         
-    # Checks that it starts with a capital letter
+    # Checks that it starts with a capital letter.
     if not inp[0].isupper():
         return False
         
-    # Checks that there are an even number of quotation marks
+    # Checks that there are an even number of quotation marks.
     if (inp.count("\"") % 2) != 0:
         return False
         
-    # Checks that the String ends with one of the following sentence termination characters:
+    # Checks that the String ends with one of the following sentence termination characters: ".", "?", "!".
     if not inp[len(inp) - 1] in [".", "?", "!"]:
         return False
         
