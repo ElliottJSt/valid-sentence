@@ -8,5 +8,5 @@ is valid based on a series of rules outlined below. It has been written in Pytho
 - String has no period character other than the last character.
 - Numbers below 13 are spelled out("one, "two", "three", etc...).
 ## Usage
-Once imported, use `check-valid-sentence(input)` to check if a sentence is valid, input must be of
-type string.
+Once imported, use `check-valid-sentence(input)` to check if a sentence is valid, input must be a string, 
+returns boolean True if sentence is valid, False if not.
